@@ -1,0 +1,61 @@
+.hero-section {
+  height: 100vh;
+}
+
+.c_tit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px; /* Reduced gap for smaller screens */
+  margin-top: 50px; /* Reduced margin for smaller screens */
+}
+
+.title p {
+  color: rgb(196, 229, 13);
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px; /* Reduced font size for smaller screens */
+  text-align: center; /* Center text for better alignment */
+}
+
+.pop1 {
+  color: rgb(196, 229, 13);
+  font-family: "Poppins", sans-serif;
+  font-size: 24px; /* Reduced font size for smaller screens */
+  font-weight: 600;
+  text-align: center; /* Center text for better alignment */
+}
+
+.newArrr {
+  display: flex;
+  justify-content: center;
+  color: rgb(196, 229, 13);
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #3e1c00;
+  font-size: 30px; /* Reduced font size for smaller screens */
+  padding: 15px; /* Adjusted padding for smaller screens */
+}
+
+/* Media query for iPhone 12 Pro Max */
+@media (max-width: 428px) and (max-height: 926px) {
+  .c_tit {
+    gap: 20px; /* Further reduced gap for smaller screens */
+    margin-top: 30px; /* Further reduced margin for smaller screens */
+  }
+
+  .title p {
+    font-size: 50px; /* Further reduced font size for smaller screens */
+  }
+
+  .pop1 {
+    font-size: 20px; /* Further reduced font size for smaller screens */
+  }
+
+  .newArrr {
+    font-size: 24px; /* Further reduced font size for smaller screens */
+    padding: 10px; /* Further adjusted padding for smaller screens */
+  }
+}

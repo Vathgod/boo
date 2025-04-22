@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Screen Example</title>
+    <style>
+      /* Base styles for all screens */
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .screen {
+        background-color: #fff;
+        border-radius: 40px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+
+      .status-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .status-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #666;
+      }
+
+      .navigation-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        background-color: #f8f8f8;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #007aff;
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #005bb5;
+      }
+
+      /* Styles for iPhone 12 Pro Max (428x926) */
+      @media (max-width: 428px) and (max-height: 926px) {
+        .screen {
+          width: 428px;
+          height: 926px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        .status-bar {
+          padding: 15px 25px;
+        }
+
+        .navigation-bar {
+          padding: 15px;
+        }
+      }
+
+      /* Styles for normal screens */
+      @media (min-width: 429px), (min-height: 927px) {
+        .screen {
+          width: 800px;
+          height: 600px;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+
+        .status-bar {
+          padding: 20px 30px;
+        }
+
+        .navigation-bar {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="screen">
+      <div class="status-bar">
+        <span>9:41</span>
+        <div class="status-icons">
+          <span class="signal">📶</span>
+          <span class="wifi">Wi-Fi</span>
+          <span class="battery">100%</span>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Hello, World!</h1>
+        <p>This screen adapts to iPhone 12 Pro Max and normal screens!</p>
+      </div>
+      <div class="navigation-bar">
+        <button onclick="alert('Home button clicked!')">Home</button>
+        <button onclick="alert('Back button clicked!')">Back</button>
+      </div>
+    </div>
+    <script>
+      // You can add JavaScript functionality here if needed.
+    </script>
+  </body>
+</html>
